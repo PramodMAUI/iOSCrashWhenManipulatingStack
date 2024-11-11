@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iOSNavStackRemoveCrash.MainPage">
+
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label  VerticalOptions="Center"
+                Text="Welcome to &#10;.NET Multi-platform App UI"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <Button
+                Text="Navigate to Page 1" Clicked="Button_Clicked"
+                HorizontalOptions="Fill" VerticalOptions="Center"/>
+        </VerticalStackLayout>
+
+</ContentPage>
