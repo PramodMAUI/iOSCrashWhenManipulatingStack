@@ -9,5 +9,4 @@ public partial class SecondPage : ContentPage
         InitializeComponent();
         BindingContext = VM;
     }
-
 }
