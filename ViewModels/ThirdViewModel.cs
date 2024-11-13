@@ -1,18 +1,14 @@
-﻿using iOSNavStackRemoveCrash.Common.Enums;
-using iOSNavStackRemoveCrash.Interfaces;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace iOSNavStackRemoveCrash.ViewModels
 {
-    public class ThirdViewModel : BaseViewModel
+    public partial class ThirdViewModel : ObservableObject
     {
-        public ThirdViewModel(INavigationService navigationService) : base(navigationService)
+        [RelayCommand]
+        async Task Navigate(string route)
         {
-            PageType = PageTypeEnum.Page3;
-        }
-        public async Task InitAsync()
-        {
-            base.NavigationService.ManipulateNavStack(PageTypeEnum.Page1, PageTypeEnum.Page3);
-
+            await Shell.Current.GoToAsync(route);
         }
     }
 }

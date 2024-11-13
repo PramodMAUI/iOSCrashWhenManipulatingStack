@@ -4,9 +4,10 @@ namespace iOSNavStackRemoveCrash;
 
 public partial class SecondPage : ContentPage
 {
-	public SecondPage()
-	{
+    public SecondPage(SecondViewModel VM)
+    {
         InitializeComponent();
+        BindingContext = VM;
     }
 
 }

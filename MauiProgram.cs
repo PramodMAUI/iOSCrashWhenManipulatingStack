@@ -1,6 +1,4 @@
-﻿using iOSNavStackRemoveCrash.Interfaces;
-using iOSNavStackRemoveCrash.Services;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 
 namespace iOSNavStackRemoveCrash
 {
@@ -20,8 +18,19 @@ namespace iOSNavStackRemoveCrash
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-            builder.Services.AddSingleton<INavigationService, NavigationService>();
-            builder.Services.AddSingleton<IViewFactory, ViewFactory>();
+
+            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<FirstPage>();
+            builder.Services.AddSingleton<SecondPage>();
+            builder.Services.AddSingleton<ThirdPage>();
+            builder.Services.AddSingleton<ViewModels.FirstViewModel>();
+            builder.Services.AddSingleton<ViewModels.SecondViewModel>();
+            builder.Services.AddSingleton<ViewModels.ThirdViewModel>();
+
+            //Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
+            Routing.RegisterRoute(nameof(FirstPage), typeof(FirstPage));
+            Routing.RegisterRoute(nameof(SecondPage), typeof(SecondPage));
+            Routing.RegisterRoute(nameof(ThirdPage), typeof(ThirdPage));
 
             return builder.Build();
         }

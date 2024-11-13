@@ -1,27 +1,14 @@
-﻿using iOSNavStackRemoveCrash.Common.Enums;
-using iOSNavStackRemoveCrash.Interfaces;
-using Microsoft.Extensions.Logging;
-using System.Windows.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace iOSNavStackRemoveCrash.ViewModels
 {
-    public class FirstViewModel : BaseViewModel
+    public partial class FirstViewModel : ObservableObject
     {
-        public ICommand ButtonClickCommand { get; }
-
-        public FirstViewModel(INavigationService navigationService) : base(navigationService)
+        [RelayCommand]
+        async Task Navigate(string route)
         {
-            ButtonClickCommand = new Command(OnButtonClicked);
-            PageType = PageTypeEnum.Page1;
-        }
-
-        public void Init()
-        {
-        }
-        public async void OnButtonClicked()
-        {
-            await this.NavigationService.PagePushAsync<SecondViewModel>(async vm => await vm.InitAsync());
-
+            await Shell.Current.GoToAsync(route);
         }
     }
 }

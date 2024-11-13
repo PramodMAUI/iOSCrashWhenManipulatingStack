@@ -1,21 +1,15 @@
-﻿using iOSNavStackRemoveCrash.Interfaces;
-using iOSNavStackRemoveCrash.ViewModels;
-
-namespace iOSNavStackRemoveCrash
+﻿namespace iOSNavStackRemoveCrash
 {
     public partial class MainPage : ContentPage
     {
-        private readonly INavigationService navigationService;
-        public MainPage(INavigationService navigationService)
+        public MainPage()
         {
             InitializeComponent();
-            this.navigationService = navigationService;
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            //Navigation.PushAsync(new FirstPage());
-            await navigationService.PushToRootAsync<FirstViewModel>(vm => vm.Init());
+            await Shell.Current.GoToAsync(nameof(FirstPage));
         }
     }
 

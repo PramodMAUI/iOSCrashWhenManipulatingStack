@@ -4,9 +4,9 @@ namespace iOSNavStackRemoveCrash;
 
 public partial class ThirdPage : ContentPage
 {
-	public ThirdPage()
+    public ThirdPage(ThirdViewModel VM)
     {
         InitializeComponent();
+        BindingContext = VM;
     }
-
 }
