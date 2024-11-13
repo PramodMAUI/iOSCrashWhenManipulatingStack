@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace iOSNavStackRemoveCrash.ViewModels
 {
-    public partial class ThirdViewModel : ObservableObject
+    public partial class MainViewModel : ObservableObject
     {
         [RelayCommand]
         async Task Navigate(string route)

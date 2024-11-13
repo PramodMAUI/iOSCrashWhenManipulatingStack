@@ -5,7 +5,7 @@
              Title="ThirdPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to Page 3"
+            Text="Welcome to ThirdPage"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>

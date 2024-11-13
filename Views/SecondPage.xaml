@@ -8,11 +8,11 @@
             Spacing="25">
 
         <Label  VerticalOptions="Center"
-                Text="Welcome to Page 2"
+                Text="Welcome to SecondPage"
                 Style="{StaticResource SubHeadline}"/>
 
         <Button
-                Text="Navigate to Page 3" Command="{Binding ButtonClickCommand}"
+                Text="Navigate to ThirdPage" Command="{Binding NavigateCommand}" CommandParameter="../ThirdPage"
                 HorizontalOptions="Fill" VerticalOptions="Center"/>
     </VerticalStackLayout>
 </ContentPage>
