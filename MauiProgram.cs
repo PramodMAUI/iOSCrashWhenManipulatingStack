@@ -23,11 +23,11 @@ namespace iOSNavStackRemoveCrash
             builder.Services.AddSingleton<FirstPage>();
             builder.Services.AddSingleton<SecondPage>();
             builder.Services.AddSingleton<ThirdPage>();
+            builder.Services.AddSingleton<ViewModels.MainViewModel>();
             builder.Services.AddSingleton<ViewModels.FirstViewModel>();
             builder.Services.AddSingleton<ViewModels.SecondViewModel>();
             builder.Services.AddSingleton<ViewModels.ThirdViewModel>();
 
-            //Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
             Routing.RegisterRoute(nameof(FirstPage), typeof(FirstPage));
             Routing.RegisterRoute(nameof(SecondPage), typeof(SecondPage));
             Routing.RegisterRoute(nameof(ThirdPage), typeof(ThirdPage));

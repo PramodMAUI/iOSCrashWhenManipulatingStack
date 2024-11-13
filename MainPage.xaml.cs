@@ -1,16 +1,13 @@
-﻿namespace iOSNavStackRemoveCrash
+﻿using iOSNavStackRemoveCrash.ViewModels;
+
+namespace iOSNavStackRemoveCrash
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        public MainPage(MainViewModel VM)
         {
             InitializeComponent();
-        }
-
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync(nameof(FirstPage));
+            BindingContext = VM;
         }
     }
-
 }

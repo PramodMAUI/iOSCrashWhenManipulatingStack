@@ -14,7 +14,7 @@
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
             <Button
-                Text="Navigate to FirstPage" Clicked="Button_Clicked"
+                Text="Navigate to FirstPage" Command="{Binding NavigateCommand}" CommandParameter="FirstPage"
                 HorizontalOptions="Fill" VerticalOptions="Center"/>
         </VerticalStackLayout>
 
