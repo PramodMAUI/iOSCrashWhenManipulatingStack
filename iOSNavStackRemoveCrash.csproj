@@ -64,32 +64,4 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Compile Update="Views\FirstPage.xaml.cs">
-	    <DependentUpon>FirstPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\SecondPage.xaml.cs">
-	    <DependentUpon>SecondPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Views\ThirdPage.xaml.cs">
-	    <DependentUpon>ThirdPage.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="Views\FirstPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\SecondPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\ThirdPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Services\" />
-	</ItemGroup>
-
 </Project>
