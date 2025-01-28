@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iOSNavStackRemoveCrash.Views
+namespace iOSDisplayAlertHiddenIssue.Views
 {
     public class BaseNavigationPage : NavigationPage
     {

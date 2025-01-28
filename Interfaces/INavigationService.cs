@@ -1,5 +1,5 @@
-﻿using iOSNavStackRemoveCrash.ViewModels;
-namespace iOSNavStackRemoveCrash.Interfaces
+﻿using iOSDisplayAlertHiddenIssue.ViewModels;
+namespace iOSDisplayAlertHiddenIssue.Interfaces
 {
     public interface INavigationService
     {
@@ -16,6 +16,8 @@ namespace iOSNavStackRemoveCrash.Interfaces
 
         INavigation GetNavigationService();
         void ManipulateNavStack(Common.Enums.PageTypeEnum startPageType, Common.Enums.PageTypeEnum endPageType);
+        Task PagePushModalAsync<TViewModel>(Action<TViewModel> activateAction) where TViewModel : BaseViewModel;
+        Task PopModalAsync();
 
     }
 }

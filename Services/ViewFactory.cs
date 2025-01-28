@@ -1,9 +1,9 @@
 ﻿
-using iOSNavStackRemoveCrash.Common;
-using iOSNavStackRemoveCrash.Interfaces;
-using iOSNavStackRemoveCrash.ViewModels;
+using iOSDisplayAlertHiddenIssue.Common;
+using iOSDisplayAlertHiddenIssue.Interfaces;
+using iOSDisplayAlertHiddenIssue.ViewModels;
 
-namespace iOSNavStackRemoveCrash.Services
+namespace iOSDisplayAlertHiddenIssue.Services
 {
     public class ViewFactory : IViewFactory
     {

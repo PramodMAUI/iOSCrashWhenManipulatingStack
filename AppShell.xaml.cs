@@ -1,4 +1,4 @@
-﻿namespace iOSNavStackRemoveCrash
+﻿namespace iOSDisplayAlertHiddenIssue
 {
     public partial class AppShell : Shell
     {

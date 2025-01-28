@@ -1,6 +1,6 @@
 ﻿using Autofac;
 
-namespace iOSNavStackRemoveCrash
+namespace iOSDisplayAlertHiddenIssue
 {
     public static class Resolver
     {

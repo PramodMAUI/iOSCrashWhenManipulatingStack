@@ -2,7 +2,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using System;
 
-namespace iOSNavStackRemoveCrash
+namespace iOSDisplayAlertHiddenIssue
 {
     internal class Program : MauiApplication
     {

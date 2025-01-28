@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace iOSNavStackRemoveCrash
+namespace iOSDisplayAlertHiddenIssue
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

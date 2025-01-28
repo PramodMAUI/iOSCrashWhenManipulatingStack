@@ -1,7 +1,8 @@
-﻿using iOSNavStackRemoveCrash.Interfaces;
-using iOSNavStackRemoveCrash.ViewModels;
+﻿using iOSDisplayAlertHiddenIssue.Interfaces;
+using iOSDisplayAlertHiddenIssue.ViewModels;
+using iOSDisplayAlertHiddenIssue.Views;
 
-namespace iOSNavStackRemoveCrash
+namespace iOSDisplayAlertHiddenIssue
 {
     public partial class App : Application
     {
@@ -11,13 +12,8 @@ namespace iOSNavStackRemoveCrash
         {
             InitializeComponent();
             this.navigationService = navigationService;
-            MainPage = new NavigationPage(new MainPage(this.navigationService));//new NavigationPage(new FirstPage());//new AppShell();
-            //PageNavigation();
+            MainPage = new NavigationPage(new MainPage(this.navigationService));
         }
 
-        private async void PageNavigation()
-        {
-            await navigationService.PushToRootAsync<FirstViewModel>(vm => vm.Init());
-        }
     }
 }

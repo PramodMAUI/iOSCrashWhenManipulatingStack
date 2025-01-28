@@ -1,9 +1,8 @@
-﻿namespace iOSNavStackRemoveCrash.Common.Enums
+﻿namespace iOSDisplayAlertHiddenIssue.Common.Enums
 {
     public enum PageTypeEnum
     {
-        Page1,
-        Page2,
-        Page3
+        StockControl,
+        Scanner
     }
 }

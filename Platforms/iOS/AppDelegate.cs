@@ -5,7 +5,7 @@ using System;
 using UIKit;
 using IContainer = Autofac.IContainer;
 
-namespace iOSNavStackRemoveCrash
+namespace iOSDisplayAlertHiddenIssue
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

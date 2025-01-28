@@ -1,6 +1,6 @@
-﻿using iOSNavStackRemoveCrash.ViewModels;
+﻿using iOSDisplayAlertHiddenIssue.ViewModels;
 
-namespace iOSNavStackRemoveCrash.Interfaces
+namespace iOSDisplayAlertHiddenIssue.Interfaces
 {
     public interface IViewFactory
     {

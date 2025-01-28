@@ -1,7 +1,7 @@
-﻿using iOSNavStackRemoveCrash.Interfaces;
-using iOSNavStackRemoveCrash.ViewModels;
+﻿using iOSDisplayAlertHiddenIssue.Interfaces;
+using iOSDisplayAlertHiddenIssue.ViewModels;
 
-namespace iOSNavStackRemoveCrash
+namespace iOSDisplayAlertHiddenIssue
 {
     public partial class MainPage : ContentPage
     {
@@ -14,8 +14,9 @@ namespace iOSNavStackRemoveCrash
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            //Navigation.PushAsync(new FirstPage());
-            await navigationService.PushToRootAsync<FirstViewModel>(vm => vm.Init());
+
+            await this.navigationService.PagePushAsync<StockControlViewModel>(vm => vm.Init());
+
         }
     }
 

@@ -1,14 +1,14 @@
-﻿using iOSNavStackRemoveCrash.Common.Enums;
-using iOSNavStackRemoveCrash.Interfaces;
-using iOSNavStackRemoveCrash.ViewModels;
-using iOSNavStackRemoveCrash.Views;
+﻿using iOSDisplayAlertHiddenIssue.Common.Enums;
+using iOSDisplayAlertHiddenIssue.Interfaces;
+using iOSDisplayAlertHiddenIssue.ViewModels;
+using iOSDisplayAlertHiddenIssue.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iOSNavStackRemoveCrash.Services
+namespace iOSDisplayAlertHiddenIssue.Services
 {
     public class NavigationService : INavigationService
     {
@@ -170,5 +170,27 @@ namespace iOSNavStackRemoveCrash.Services
             }
         }
 
+        public Task PopModalAsync()
+        {
+            var navigationService = GetNavigationService();
+            return navigationService.PopModalAsync();
+        }
+
+        public async Task PagePushModalAsync<TViewModel>(Action<TViewModel> activateAction) where TViewModel : BaseViewModel
+        {
+            Page page = viewFactory.CreatePage(activateAction);
+            INavigation navigationService = GetNavigationService();
+            if (navigationService?.NavigationStack?.FirstOrDefault(x => x.GetType() == page.GetType()) == null)
+            {
+                try
+                {
+                    await navigationService.PushModalAsync(page);
+                }
+                catch (Exception ex)
+                {
+                    // Log exception 
+                }
+            }
+        }
     }
 }

@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iOSNavStackRemoveCrash.Common
+namespace iOSDisplayAlertHiddenIssue.Common
 {
     public static class ViewModelMappingCollection
     {

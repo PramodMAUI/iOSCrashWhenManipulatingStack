@@ -1,9 +1,9 @@
 ﻿using Autofac;
-using iOSNavStackRemoveCrash.Common;
-using iOSNavStackRemoveCrash.Interfaces;
-using iOSNavStackRemoveCrash.Services;
+using iOSDisplayAlertHiddenIssue.Common;
+using iOSDisplayAlertHiddenIssue.Interfaces;
+using iOSDisplayAlertHiddenIssue.Services;
 
-namespace iOSNavStackRemoveCrash
+namespace iOSDisplayAlertHiddenIssue
 {
     public class ParentModule : Module
     {
